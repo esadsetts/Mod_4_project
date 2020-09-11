@@ -1,12 +1,12 @@
-## Pay Attention to this Bag of Tweets
+# Pay Attention to this Bag of Tweets!
 
-*Eryk Wdowiak* and *Eric Adsetts*
+### Eryk Wdowiak and Eric Adsetts
 
 This project explores the many different ways that we can use the tools of Natural Language Processing to detect sentiment in a string of text, specifically [Tweets directed at Google and Apple products](https://data.world/crowdflower/brands-and-product-emotions/).
 
 Below we show that "Bag of Words" methods can help us understand text in this particular dataset, but they are domain specific.  They cannot help us understand text from other datasets.  By contrast, word embeddings, like the [GloVe](https://nlp.stanford.edu/projects/glove/) and [word2vec](https://en.wikipedia.org/wiki/Word2vec) models, represent semantic meaning in a multidimensional space.  So in theory, word embeddings should help us find meaning across datasets.
 
-In practice however, word embeddings suffer from a lack of "stationarity" -- a word's relationship with other words changes.  Consequently, word embeddings are only useful when working with datasets that are similar in time and in domain to the text that the embeddings were trained on.
+In practice however, word embeddings suffer from a lack of "stationarity" -- a word's relationship with other words changes over time and over domain.  Consequently, word embeddings are only useful when working with datasets that are similar in time and in domain to the text that the embeddings were trained on.
 
 For example, [Honnibal and Montani (2019)](https://explosion.ai/blog/sense2vec-reloaded) trained word embeddings on [reddit](https://www.reddit.com/) comments from 2015 and 2019 and created a [demonstration page](https://explosion.ai/demos/sense2vec) where you can see how word associations changed in just four years.
 
