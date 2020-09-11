@@ -17,9 +17,13 @@ Regrettably, the Tweets in our dataset come from a very different English langua
 
 ### Bag of Words Methods
 
-Bag of Words methods are particularly effective at predicting tweet's sentiment.  High F1 scores.
+The good news is that "bag of words" methods are particularly effective at predicting a tweet's sentiment.
 
-More to come. Stay tuned!
+By removing punctuation and stopwords and by converting words back to their lemma, we reduce the vocabulary of the tweets.  Counts of the remaining words then forms the basis of a term-document matrix.  Then, using a term-frequency, we can then measure the importance of a word by how often it appears within a document.  And using inverse document frequency, we can measure the importance of a word by how infrequently it appears across documents.
+
+The product of those two measures (term frequency and inverse document frequency) allows words to be used as explanatory variables in a statistical model.  Here, we created classifiers via Naive Bayes, Random Forest, Logistic Regression, Decision Tree, K-Nearest Neighbors and Support Vector Machine and all of them yielded F1 scores over 0.60.
+
+So we can conclude that "bag of words" methods make good predictions, but they're limited to a specific time and domain.
 
 
 ### Sentence Embeddings
