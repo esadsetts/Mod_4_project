@@ -30,6 +30,8 @@ So we can conclude that "bag of words" methods make good predictions, but they'r
 
 As an alternative, we attempted to train self-attentive sentence embeddings, like the ones that [Lin, Feng, et al.](https://arxiv.org/abs/1703.03130) trained, by following [Gluon's tutorial](https://gluon-nlp.mxnet.io/examples/sentence_embedding/self_attentive_sentence_embedding.html).
 
+![attention layer](attention-layer.png)
+
 Their method is attractive because (unlike "bag of words" methods) it classifies text based on semantic meaning and also because the "attention" layers identify the words that the model focused on when predicting the classification.  Effectively, it yields both a classification and a reason for that classification.
 
 Intuitively, one might classify a Tweet based on a particular set of words within it.  Those words have a particular semantic meaning that serves as the basis for the Tweet's classification.  Lin, Feng, et al.'s model captures both.  Their model's self-attentive layers identify the important words, while a reference word embedding model captures the semantic meaning, so that the Tweet can be classified.
