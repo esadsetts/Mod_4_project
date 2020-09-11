@@ -28,19 +28,22 @@ As an alternative, we attempted to train self-attentive sentence embeddings, lik
 
 Their method is attractive because (unlike "bag of words" methods) it classifies text based on semantic meaning and also because the "attention" layers identify the words that the model focused on when predicting the classification.  Effectively, it yields both a classification and a reason for that classification.
 
-At the present time however, we could not use their method to develop a reliable predictor of sentiment because the text used to train [GloVe](https://nlp.stanford.edu/projects/glove/) is very different from the tweets that users directed at Google and Apple products.
+Intuitively, one might classify a Tweet based on a particular set of words within it.  Those words have a particular semantic meaning that serves as the basis for the Tweet's classification.  Lin, Feng, et al.'s model captures both.  Their model's self-attentive layers identify the important words, while a reference word embedding model captures the semantic meaning, so that the Tweet can be classified.
 
+At the present time however, we could not use their method to develop a reliable predictor of sentiment because the text used to train the [GloVe](https://nlp.stanford.edu/projects/glove/) embeddings is very different from the tweets that users directed at Google and Apple products.
+
+Nonetheless, if the relationships among words were stationary, we could use this method to classify and understand the classification.
 
 ### Conclusion
 
-And perhaps it's natural for words to change meaning over time.  If so, then the theoretical advantages of word embeddings are just an illusion.  We should just "pay attention to this bag of tweets."
+But perhaps it's natural for words to change meaning over time.  If so, then the theoretical advantages of word embeddings are just an illusion.  We should just "pay attention to this bag of tweets."
 
 
 ### Sources Cited
 
-* J. Pennington, R. Socher, C. Manning (2014). "GloVe: Global Vectors for Word Representation." (https://nlp.stanford.edu/projects/glove/)
+* J. Pennington, R. Socher, C. Manning (2014). "[GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/)."
 * Z. Lin, M. Feng, et al. (2017). "A Structured Self-Attentive Sentence Embedding." [arXiv: 1703.03130](https://arxiv.org/abs/1703.03130)
-* Gluon. "A Structured Self-Attentive Sentence Embedding." [tutorial](https://gluon-nlp.mxnet.io/examples/sentence_embedding/self_attentive_sentence_embedding.html).
+* Gluon. "Structured Self-Attentive Sentence Embedding." [Gluon NLP Tutorials](https://gluon-nlp.mxnet.io/examples/sentence_embedding/self_attentive_sentence_embedding.html)
 * M. Honnibal and I. Montani (21 Nov 2019). "sense2vec Reloaded: Contextually-Keyed Word Vectors." [explosion.ai](https://explosion.ai/blog/sense2vec-reloaded)
 
 
